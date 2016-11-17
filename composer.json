@@ -1,0 +1,29 @@
+{
+  "name": "uma/api-problem-bundle",
+  "description": "Integration between crell/api-problem and the Symfony framework",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "keywords": ["symfony", "api-problem"],
+  "homepage": "https://github.com/1ma/UMAApiProblemBundle",
+  "support": {
+    "issues": "https://github.com/1ma/UMAApiProblemBundle/issues",
+    "source": "https://github.com/1ma/UMAApiProblemBundle"
+  },
+  "require": {
+    "php": ">=5.5.0",
+    "crell/api-problem": "^2.0",
+    "symfony/browser-kit": "^2.7|^3.0",
+    "symfony/framework-bundle": "^2.7|^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "UMA\\ApiProblemBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TestProject\\": "tests/TestProject/src/",
+      "UMA\\Tests\\ApiProblemBundle\\": "tests/Functional"
+    }
+  }
+}
