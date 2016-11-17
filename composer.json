@@ -10,8 +10,14 @@
     "source": "https://github.com/1ma/UMAApiProblemBundle"
   },
   "require": {
-    "php": ">=5.5.0",
+    "php": ">=5.5.9",
+
     "crell/api-problem": "^2.0",
+    "symfony/config": "^2.7|^3.0",
+    "symfony/dependency-injection": "^2.7|^3.0",
+    "symfony/http-kernel": "^2.7|^3.0"
+  },
+  "require-dev": {
     "symfony/browser-kit": "^2.7|^3.0",
     "symfony/framework-bundle": "^2.7|^3.0"
   },
