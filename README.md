@@ -1,3 +1,3 @@
 # UMAApiProblemBundle
 
-Clean integration between crell/api-problem and the Symfony framework
+[![Build Status](https://travis-ci.org/1ma/UMAApiProblemBundle.svg?branch=master)](https://travis-ci.org/1ma/UMAApiProblemBundle) [![Code Coverage](https://scrutinizer-ci.com/g/1ma/UMAApiProblemBundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/1ma/UMAApiProblemBundle/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/1ma/UMAApiProblemBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/1ma/UMAApiProblemBundle/?branch=master) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/efdc3fe6-e2d1-44c7-9ff8-49ec9a09c2c4/mini.png)](https://insight.sensiolabs.com/projects/efdc3fe6-e2d1-44c7-9ff8-49ec9a09c2c4)
