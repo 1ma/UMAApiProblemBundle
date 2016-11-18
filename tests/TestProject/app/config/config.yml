@@ -4,3 +4,6 @@ framework:
         strict_requirements: ~
     secret: "very secret indeed"
     test: ~
+
+uma_api_problem:
+    default_status: 500

@@ -16,5 +16,11 @@ class UMAApiProblemExtension extends Extension
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
+
+        $umaProblemConfig = $this->processConfiguration(new Configuration(), $configs);
+
+        $container->getDefinition('uma.api_problem.listener')
+            ->replaceArgument(0, $umaProblemConfig['default_status']);
+
     }
 }

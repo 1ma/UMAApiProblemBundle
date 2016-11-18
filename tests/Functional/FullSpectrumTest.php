@@ -29,6 +29,6 @@ class FullSpectrumTest extends \PHPUnit_Framework_TestCase
 
         $response = $this->client->getInternalResponse();
 
-        self::assertSame(Response::HTTP_BAD_REQUEST, $response->getStatus());
+        self::assertSame(Response::HTTP_INTERNAL_SERVER_ERROR, $response->getStatus());
     }
 }
