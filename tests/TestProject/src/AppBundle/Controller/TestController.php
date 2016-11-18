@@ -2,14 +2,13 @@
 
 namespace TestProject\AppBundle\Controller;
 
+use Crell\ApiProblem\ApiProblem;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 class TestController extends Controller
 {
-    public function indexAction(Request $request)
+    public function indexAction()
     {
-        return new Response('hi');
+        return new ApiProblem('A problem occurred');
     }
 }

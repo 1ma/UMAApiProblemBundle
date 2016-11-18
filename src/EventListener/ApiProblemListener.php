@@ -4,10 +4,12 @@ namespace UMA\ApiProblemBundle\EventListener;
 
 use Crell\ApiProblem\ApiProblem;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
-class KekListener implements EventSubscriberInterface
+class ApiProblemListener implements EventSubscriberInterface
 {
     /**
      * @param GetResponseForControllerResultEvent $event
@@ -19,6 +21,17 @@ class KekListener implements EventSubscriberInterface
         if (!$controllerResult instanceof ApiProblem) {
             return;
         }
+
+        $statusCode = 0 === $controllerResult->getStatus() ?
+            Response::HTTP_BAD_REQUEST : $controllerResult->getStatus();
+
+        $event->setResponse(
+            new JsonResponse(
+                $controllerResult->asArray(),
+                $statusCode,
+                ['Content-Type' => 'application/problem+json']
+            )
+        );
     }
 
     /**
