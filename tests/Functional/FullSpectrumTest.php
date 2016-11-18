@@ -49,7 +49,7 @@ class FullSpectrumTest extends \PHPUnit_Framework_TestCase
 
     public function testListenerOnlyHandlesApiProblemObjects()
     {
-        self::expectException(\LogicException::class);
+        self::setExpectedException(\LogicException::class);
 
         $this->client
             ->request('GET', '/?trigger_exception');
