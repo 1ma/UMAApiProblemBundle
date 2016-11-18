@@ -17,8 +17,7 @@ class Configuration implements ConfigurationInterface
 
         $treeBuilder->root('uma_api_problem')
             ->children()
-                ->scalarNode('default_status')->defaultValue(Response::HTTP_BAD_REQUEST)
-                ->end()
+                ->scalarNode('default_status')->defaultValue(Response::HTTP_BAD_REQUEST)->end()
             ->end();
 
         return $treeBuilder;
