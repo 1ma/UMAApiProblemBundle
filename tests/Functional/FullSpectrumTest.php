@@ -49,9 +49,9 @@ class FullSpectrumTest extends \PHPUnit_Framework_TestCase
 
     public function testListenerOnlyHandlesApiProblemObjects()
     {
-        self::setExpectedException(\LogicException::class);
-
-        $this->client
-            ->request('GET', '/?trigger_exception');
+        self::assertContains(
+            'The controller must return a response (boom given)',
+            $this->client->request('GET', '/?trigger_exception')->text()
+        );
     }
 }
