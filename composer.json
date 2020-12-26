@@ -9,6 +9,7 @@
     "issues": "https://github.com/1ma/UMAApiProblemBundle/issues",
     "source": "https://github.com/1ma/UMAApiProblemBundle"
   },
+  "abandoned": true,
   "require": {
     "php": ">=5.5.9",
 
